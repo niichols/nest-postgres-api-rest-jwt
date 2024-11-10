@@ -15,6 +15,9 @@ async function bootstrap() {
     }),
   );
 
-  await app.listen(parseInt(process.env.POSTGRES_PORT) || 3000);
+  // Falto agregar CORS
+  app.enableCors();
+
+  await app.listen(parseInt(process.env.PORT) || 8000);
 }
 bootstrap();
