@@ -5,6 +5,12 @@ import { AuthModule } from './auth/auth.module';
 import { BreedsModule } from './breeds/breeds.module';
 import { CatsModule } from './cats/cats.module';
 import { UsersModule } from './users/users.module';
+import { ClientesModule } from './clientes/clientes.module';
+import { LibrosModule } from './libros/libros.module';
+import { EstadoModule } from './estado/estado.module';
+import { EquiposModule } from './equipos/equipos.module';
+import { ReservasModule } from './reservas/reservas.module';
+import { EstudiantesModule } from './estudiantes/estudiantes.module';
 
 @Module({
   imports: [
@@ -13,7 +19,7 @@ import { UsersModule } from './users/users.module';
     }),
 
     TypeOrmModule.forRoot({
-      type: 'postgres',
+      type: 'mysql',
       host: process.env.POSTGRES_HOST,
       port: parseInt(process.env.POSTGRES_PORT),
       username: process.env.POSTGRES_USERNAME,
@@ -35,6 +41,12 @@ import { UsersModule } from './users/users.module';
     BreedsModule,
     UsersModule,
     AuthModule,
+    ClientesModule,
+    LibrosModule,
+    EstadoModule,
+    EquiposModule,
+    ReservasModule,
+    EstudiantesModule,
   ],
   controllers: [],
   providers: [],

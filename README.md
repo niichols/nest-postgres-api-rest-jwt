@@ -28,7 +28,19 @@
 
 ## Installation
 
-```bash
+```bash Crear modulo
+$ nest g resource cats --no-spec
+```
+
+```bash Crear Imagen
+$ docker compose up -d
+```
+
+```bash Eliminar Imagen
+docker compose down
+```
+
+```bash Agregar depedencias node > 18
 $ npm install
 ```
 

@@ -16,6 +16,8 @@ async function bootstrap() {
     }),
   );
 
+  app.enableCors();
+
   const config = new DocumentBuilder()
     .setTitle('Backend en Postgres')
     .setDescription('Backend en Postgres - API description')
